@@ -4,7 +4,7 @@ import LoginScreen from '../telas/login';
 import HomeScreen from '../telas/home';
 import CadUsuarioScreen from '../telas/cad-usuario';
 import RecSenhaScreen from  '../telas/recSenha';
-import TabNavigator from '../tabNavigator';
+import TabNavigator from './tabNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,8 +29,8 @@ function RootStack() {
       />
       <Stack.Screen
         name="home"
-        component={HomeScreen}
-        options={{ title: 'Home' }} 
+        component={TabNavigator}
+        options={{ title: 'Home', headerShown: false }} 
       />
       <Stack.Screen 
        name="cadUsu"
